@@ -26,7 +26,7 @@ def main():
     trajectory.append(Frame.from_euler_3(np.array([0.25 * pi, 0., 0.75 * pi]), np.array([[0.48127], [0.], [1.13182]])))
     trajectory.append(Frame.from_euler_3(np.array([0.5 * pi, 0., pi]), np.array([[0.48127], [0.], [0.63182]])))
 
-    robot.show_trajectory(trajectory, motion="p2p")
+    robot.show_trajectory(trajectory, motion="lin")
 
 
 if __name__ == "__main__":

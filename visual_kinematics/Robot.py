@@ -73,6 +73,7 @@ class Robot:
     def end_frame(self):
         return self.axis_frames[-1]
 
+    # https://automaticaddison.com/the-ultimate-guide-to-jacobian-matrices-for-robotics/
     @property
     def jacobian(self):
         axis_fs = self.axis_frames
@@ -104,6 +105,7 @@ class Robot:
         self.forward(theta_x)
         return theta_x
 
+    # http://boris-belousov.net/2016/07/29/jacobians/
     def inverse_numerical(self, end_frame):
         last_dx = np.zeros([6, 1])
         for _ in range(self.max_iter):
